@@ -1,0 +1,181 @@
+/* ===== Base Section ===== */
+.highlight-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: url("https://static.vecteezy.com/system/resources/previews/053/330/314/non_2x/minimalist-elegant-detailed-mandala-art-in-gold-and-beige-tones-square-background-free-vector.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ===== Heading ===== */
+.highlight-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.highlight-heading h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d45226;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background-color: #d45226;
+  border-radius: 3px;
+}
+
+.highlight-heading p {
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #5b4d47;
+  margin-top: 10px;
+}
+
+/* ===== Film Frame Container ===== */
+.highlight-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.film-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 4px solid #e6b497;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* ===== Video Frame ===== */
+.video-frame {
+  width: 600px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 6px;
+}
+
+/* ===== Side Panels ===== */
+.film-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3e5d0;
+  width: 60px;
+  height: 350px;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #d45226;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-arrow:hover {
+  transform: scale(1.2);
+  color: #a93d18;
+}
+
+/* ===== Decorative Images ===== */
+.left-decor {
+  position: absolute;
+  left: 40px;
+  bottom: 80px;
+  width: 150px;
+  opacity: 0.6;
+}
+
+.right-decor {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  width: 200px;
+  opacity: 0.6;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .video-frame {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-frame {
+    width: 400px;
+    height: 250px;
+  }
+
+  .film-side {
+    height: 250px;
+  }
+
+  .highlight-heading h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-section {
+    padding: 40px 20px;
+  }
+
+  .video-frame {
+    width: 100%;
+    height: 200px;
+  }
+
+  .film-side {
+    display: none;
+  }
+
+  .highlight-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .highlight-heading p {
+    font-size: 1rem;
+  }
+
+  .left-decor,
+  .right-decor {
+    display: none;
+  }
+}

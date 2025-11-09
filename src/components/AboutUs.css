@@ -1,0 +1,156 @@
+/* ====== Base Section ====== */
+.about-section {
+  min-height: 100vh;
+  background: url("https://static.vecteezy.com/system/resources/previews/053/330/314/non_2x/minimalist-elegant-detailed-mandala-art-in-gold-and-beige-tones-square-background-free-vector.jpg")
+    no-repeat center center/cover;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  font-family: "Georgia", serif;
+}
+
+/* ====== Main Heading ====== */
+.about-heading h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: #e95e08;
+  
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== Intro Section ====== */
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: #4b2e1b;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #3c2b21;
+}
+
+/* ====== Sticky Notes Section ====== */
+.sticky-notes-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.sticky {
+  background-color: #fff8dc;
+  border: 1px solid #f3d178;
+  width: 230px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sticky:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.sticky-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b25b28;
+  margin-bottom: 10px;
+}
+
+.sticky h3 {
+  color: #3b2416;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.sticky p {
+  color: #4b3a2d;
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+}
+
+/* ====== Signature / Cursive Section ====== */
+.signature-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.signature-section h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  color: #5b2c17;
+  letter-spacing: 1px;
+}
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 60px 40px;
+  }
+
+  .about-heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .sticky {
+    width: 200px;
+  }
+
+  .signature-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 40px 20px;
+  }
+
+  .about-heading h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .sticky {
+    width: 90%;
+    transform: none;
+  }
+
+  .signature-section h2 {
+    font-size: 1.5rem;
+  }
+}

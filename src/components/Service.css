@@ -1,0 +1,189 @@
+/* ===== Base Section ===== */
+.services-section {
+  padding: 80px 60px;
+  min-height: 100vh;
+  background: url("https://static.vecteezy.com/system/resources/previews/053/330/314/non_2x/minimalist-elegant-detailed-mandala-art-in-gold-and-beige-tones-square-background-free-vector.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* ===== Heading ===== */
+.services-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.services-heading h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d45226; /* warm orange */
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+.services-heading p {
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  color: #5b4d47;
+  font-style: italic;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* ===== Gallery ===== */
+.services-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ===== Service Card ===== */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Photo Frame ===== */
+.photo-frame {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-frame img {
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Tape Effect */
+.tape {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 255, 200, 0.85);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.tape-top-left {
+  top: -10px;
+  left: 20px;
+  transform: rotate(-5deg);
+}
+
+.tape-top-right {
+  top: -10px;
+  right: 20px;
+  transform: rotate(5deg);
+}
+
+/* Hover Effect */
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Caption ===== */
+.caption {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #2b1a13;
+  font-family: "Georgia", serif;
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 60px 40px;
+  }
+
+  .services-heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-gallery {
+    gap: 40px;
+  }
+
+  .photo-frame img {
+    width: 230px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 50px 30px;
+  }
+
+  .services-heading h1 {
+    font-size: 2.2rem;
+  }
+
+  .services-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .photo-frame img {
+    width: 240px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 40px 20px;
+  }
+
+  .services-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .services-heading p {
+    font-size: 1rem;
+  }
+
+  .photo-frame img {
+    width: 200px;
+    height: 140px;
+  }
+
+  .caption {
+    font-size: 0.9rem;
+  }
+}

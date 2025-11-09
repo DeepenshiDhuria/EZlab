@@ -1,0 +1,186 @@
+/* =============================
+   HERO SECTION BASE
+============================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 100px 80px;
+  color: black;
+  position: relative;
+  gap: 250px;
+  box-sizing: border-box;
+  background: url("https://img.freepik.com/premium-vector/simple-radiant-gold-mandala-texture-yellow-cream-background-design_179530-1645.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Bubble animation container */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Bubble effect */
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgba(235, 172, 105, 0.6);
+  border-radius: 50%;
+  animation: rise 10s infinite linear;
+  opacity: 0.6;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-300px) scale(1.2);
+  }
+  100% {
+    transform: translateY(-600px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Left Section */
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-name {
+  font-size: 80px;
+  font-weight: 600;
+  color: #060404;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.v-letter {
+  font-family: "Great Vibes", cursive;
+  font-size: 200px;
+  color: #f15a29;
+  margin-right: 8px;
+}
+
+/* Mandala Behind VFilms */
+.mandala-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 1;
+  background: url("https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI1LTAxL3Jhd3BpeGVsb2ZmaWNlM19jb250b3VyX2xpbmVfYXJ0X29mX2lzbGFtaWNfb3JuYW1lbnRfaW5fcm91bmRlZF8yNDVjOTQwMC04OGY5LTQ1MzUtYjY4YS02ZDlmNmIwMDQ5MjBfMS5wbmc.png") no-repeat center/contain;
+  animation: rotateMandala 40s linear infinite, pulseMandala 6s ease-in-out infinite;
+}
+
+
+
+/* Right Section */
+.hero-right {
+  flex: 1;
+  text-align: center;
+  padding-left: 60px;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 65px;
+  color: #140352;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.highlight {
+  color: #f15a29;
+  animation: colorShift 4s infinite alternate;
+}
+
+@keyframes colorShift {
+  0% { color: #f15a29; }
+  25% { color: #7e0fe0; }
+  50% { color: #fa08b1; }
+  75% { color: #3ad4f0; }
+  100% { color: #0fb509; }
+}
+
+.hero-subtitle {
+  color: #f98109;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle:hover {
+  color: #f40c0c;
+  cursor: pointer;
+}
+
+.hero-desc {
+  color: #303030;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 520px;
+  margin-top: 20px;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 40px;
+    gap: 100px;
+  }
+
+  .hero-left, .hero-right { padding: 0; }
+
+  .mandala-wrapper { width: 280px; height: 280px; }
+  .hero-title { font-size: 55px; }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 20px;
+    gap: 60px;
+  }
+
+  .hero-name { font-size: 48px; }
+  .v-letter { font-size: 70px; }
+
+  .mandala-wrapper { width: 200px; height: 200px; }
+  .hero-title { font-size: 32px; }
+  .hero-desc { font-size: 14px; }
+}

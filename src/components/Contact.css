@@ -1,0 +1,116 @@
+:root {
+  --accent: #f15a29;
+  --accent-hover: #e0970f;
+}
+
+/* =============================
+   CONTACT SECTION
+============================= */
+.contact-section {
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  background: url('https://static.vecteezy.com/system/resources/previews/053/330/314/non_2x/minimalist-elegant-detailed-mandala-art-in-gold-and-beige-tones-square-background-free-vector.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1100px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Left Side */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.contact-left h2 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.contact-left p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Right Side */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(241, 90, 41, 0.2);
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.success-msg {
+  color: green;
+  font-size: 0.9rem;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .contact-left {
+    padding-right: 0;
+    text-align: center;
+  }
+}

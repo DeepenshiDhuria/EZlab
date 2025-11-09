@@ -1,0 +1,186 @@
+/* ===== Base Section ===== */
+.portfolio-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 100px 80px;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  /* ✨ Background Image ✨ */
+  background: url("https://img.freepik.com/premium-vector/vintage-mandala-pooja-background-light-brown-color_839335-389.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* ===== Heading at Top ===== */
+.portfolio-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portfolio-heading h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #e86a0a;
+
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+.services-heading h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background-color: #d45226;
+  border-radius: 3px;
+}
+
+
+.portfolio-heading p {
+  font-size: 1.2rem;
+  color: #5b4d47;
+  font-style: italic;
+}
+
+/* ===== Left Side ===== */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sticky Note */
+.sticky-note {
+  background-color: #fff8dc;
+  border: 1px solid #f3d178;
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 270px;
+  padding: 20px;
+  transform: rotate(-3deg);
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.clip {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 1.3rem;
+}
+
+.sticky-note p {
+  font-family: "Georgia", serif;
+  color: #3d2b1f;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}
+
+/* India Gate */
+.india-gate {
+  width: 280px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* ===== Right Side ===== */
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.text-content {
+  max-width: 420px;
+}
+
+.text-content h2 {
+  font-family: "Times New Roman", serif;
+  font-size: 1.8rem;
+  color: #2b1a13;
+  margin-bottom: 20px;
+}
+
+.view-btn {
+  background-color: #e85a2a;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #cf4d1e;
+  transform: translateY(-3px);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 1024px) {
+  .portfolio-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 40px;
+  }
+
+  .right-side {
+    align-items: center;
+    text-align: center;
+  }
+
+  
+
+  .text-content h2 {
+    font-size: 1.34rem;
+  }
+
+  .india-gate {
+    width: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-section {
+    padding: 60px 20px;
+  }
+
+  .portfolio-heading h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio-heading p {
+    font-size: 1rem;
+  }
+
+  .sticky-note {
+    width: 90%;
+    transform: none;
+  }
+
+  .india-gate {
+    width: 180px;
+  }
+
+  .text-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .view-btn {
+    font-size: 0.9rem;
+    padding: 10px 22px;
+  }
+}
